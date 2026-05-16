@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+  <meta charset=”UTF-8” />
+  <meta name=”viewport” content=”width=device-width, initial-scale=1” />
+  <title>Raymond Ekpeziza TamaraUkeDimine | Freelance Writer</title>
+  <meta name=”description” content=”Freelance Writer | Technical Content Creator | Customer Communication Specialist — Clear, structured writing that helps businesses communicate better.” />
+
+  <style>
+    :root{
+      --navy:#1F2A44;
+      --white:#FFFFFF;
+      --blue:#4DA3FF;
+      --bg:#F7F9FC;
+      --text:#333333;
+      --muted:#6B7280;
+      --border: rgba(31,42,68,0.12);
+      --shadow: 0 10px 30px rgba(31,42,68,0.08);
+      --radius: 16px;
+      --max: 1100px;
+    }
+
+    *{box-sizing:border-box}
+    Html,body{margin:0;padding:0}
+    Body{
+      Font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, “Apple Color Emoji”,”Segoe UI Emoji”;
+      Color: var(--text);
+      Background: var(--bg);
+      Line-height: 1.55;
+    }
+
+    A{color:inherit}
+    .container{
+      Width: min(var(--max), calc(100% - 40px));
+      Margin: 0 auto;
+    }
+
+    /* ---------- Header / Hero ---------- */
+    Header{
+      Background: var(--white);
+      Border-bottom: 1px solid var(--border);
+    }
+
+    .hero{
+      Display:grid;
+      Grid-template-columns: 1.1fr 0.9fr;
+      Gap: 28px;
+      Padding: 56px 0;
+      Align-items:center;
+    }
+
+    .badge{
+      Display:inline-flex;
+      Gap:10px;
+      Align-items:center;
+      Padding: 8px 12px;
+      Border: 1px solid var(--border);
+      Border-radius: 999px;
+      Color: var(--navy);
+      Background: rgba(77,163,255,0.08);
+      Font-size: 14px;
+      Font-weight: 600;
+    }
+
+    H1{
+      Margin: 14px 0 10px;
+      Font-size: clamp(34px, 4.2vw, 52px);
+      Line-height: 1.1;
+      Letter-spacing: -0.02em;
+      Color: var(--navy);
+    }
+
+    .role{
+      Margin: 0 0 10px;
+      Font-size: 16px;
+      Color: var(--navy);
+      Font-weight: 600;
+    }
+
+    .subtitle{
+      Margin: 0 0 16px;
+      Color: var(--muted);
+      Font-size: 16px;
+      Max-width: 60ch;
+    }
+
+    .meta{
+      Margin: 0 0 22px;
+      Color: var(--text);
+      Font-weight: 600;
+    }
+
+    .actions{
+      Display:flex;
+      Gap: 12px;
+      Flex-wrap: wrap;
+      Align-items:center;
+    }
+
+    .btn{
+      Display:inline-flex;
+      Align-items:center;
+      Justify-content:center;
+      Gap:10px;
+      Padding: 12px 16px;
+      Border-radius: 12px;
+      Border: 1px solid transparent;
+      Text-decoration:none;
+      Font-weight: 700;
+      Font-size: 15px;
+      Cursor:pointer;
+      Transition: transform .06s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+      User-select:none;
+      White-space: nowrap;
+    }
+    .btn:active{transform: translateY(1px)}
+
+    .btn-primary{
+      Background: var(--blue);
+      Color: var(--white);
+      Box-shadow: 0 10px 20px rgba(77,163,255,0.22);
+    }
+    .btn-primary:hover{box-shadow: 0 14px 30px rgba(77,163,255,0.26)}
+
+    .btn-secondary{
+      Background: var(--white);
+      Color: var(--navy);
+      Border-color: var(--border);
+    }
+    .btn-secondary:hover{border-color: rgba(31,42,68,0.22)}
+
+    .hero-card{
+      Border: 1px solid var(--border);
+      Border-radius: var(--radius);
+      Overflow:hidden;
+      Background: var(--white);
+      Box-shadow: var(--shadow);
+    }
+
+    .hero-image{
+      Width: 100%;
+      Aspect-ratio: 4/3;
+      Object-fit: cover;
+      Display:block;
+      Filter: saturate(0.98) contrast(1.02);
+    }
+
+    .hero-card-footer{
+      Padding: 14px 16px 16px;
+      Border-top: 1px solid var(--border);
+      Color: var(--muted);
+      Font-size: 14px;
+    }
+
+    /* ---------- Sections ---------- */
+    Main{padding: 34px 0 70px}
+    Section{
+      Margin-top: 26px;
+      Background: var(--white);
+      Border: 1px solid var(--border);
+      Border-radius: var(--radius);
+      Box-shadow: var(--shadow);
+    }
+    .section-inner{
+      Padding: 26px;
+    }
+
+    H2{
+      Margin: 0 0 14px;
+      Color: var(--navy);
+      Font-size: 22px;
+      Letter-spacing: -0.01em;
+    }
+
+    .two-col{
+      Display:grid;
+      Grid-template-columns: 1fr 1fr;
+      Gap: 18px;
+      Align-items:start;
+    }
+
+    .about-text p{
+      Margin: 0 0 12px;
+      Color: var(--text);
+      Max-width: 75ch;
+    }
+    .about-text p:last-child{margin-bottom:0}
+
+    .about-visual{
+      Border-radius: 14px;
+      Overflow:hidden;
+      Border: 1px solid var(--border);
+      Background: #eef4ff;
+      Min-height: 220px;
+    }
+    .about-visual img{
+      Width:100%;
+      Height:100%;
+      Object-fit:cover;
+      Display:block;
+    }
+
+    /* Services */
+    .grid{
+      Display:grid;
+      Grid-template-columns: repeat(2, minmax(0,1fr));
+      Gap: 12px;
+    }
+
+    .service{
+      Border: 1px solid var(--border);
+      Border-radius: 14px;
+      Padding: 14px 14px;
+      Display:flex;
+      Gap: 12px;
+      Align-items:flex-start;
+      Background: #fff;
+    }
+
+    .icon{
+      Width: 36px;
+      Height: 36px;
+      Border-radius: 12px;
+      Background: rgba(77,163,255,0.12);
+      Display:grid;
+      Place-items:center;
+      Flex: 0 0 auto;
+      Border: 1px solid rgba(77,163,255,0.25);
+    }
+    .service strong{
+      Display:block;
+      Color: var(--navy);
+      Margin-bottom: 2px;
+      Font-size: 15px;
+    }
+    .service span{
+      Display:block;
+      Color: var(--muted);
+      Font-size: 13.5px;
+      Margin-top: 2px;
+    }
+
+    /* Portfolio */
+    .portfolio-grid{
+      Display:grid;
+      Grid-template-columns: repeat(3, minmax(0, 1fr));
+      Gap: 14px;
+    }
+
+    .card{
+      Border: 1px solid var(--border);
+      Border-radius: 16px;
+      Padding: 16px;
+      Background: var(--white);
+      Display:flex;
+      Flex-direction:column;
+      Gap: 10px;
+      Min-height: 185px;
+    }
+
+    .card h3{
+      Margin: 0;
+      Color: var(--navy);
+      Font-size: 16px;
+      Letter-spacing: -0.01em;
+    }
+    .card p{
+      Margin: 0;
+      Color: var(--muted);
+      Font-size: 14px;
+    }
+
+    .card .card-actions{
+      Margin-top: auto;
+      Display:flex;
+      Gap: 10px;
+      Align-items:center;
+      Flex-wrap:wrap;
+    }
+
+    .btn-small{
+      Padding: 10px 12px;
+      Border-radius: 12px;
+      Font-size: 14px;
+      Font-weight: 700;
+    }
+
+    .pill{
+      Display:inline-flex;
+      Align-items:center;
+      Gap: 8px;
+      Padding: 7px 10px;
+      Border-radius: 999px;
+      Border: 1px solid var(--border);
+      Font-size: 13px;
+      Color: var(--navy);
+      Background: rgba(31,42,68,0.03);
+      Font-weight: 650;
+    }
+
+    /* Background section */
+    .timeline{
+      Display:grid;
+      Gap: 12px;
+    }
+    .job{
+      Border: 1px solid var(--border);
+      Border-radius: 14px;
+      Padding: 14px 14px;
+      Background: #fff;
+    }
+    .job-head{
+      Display:flex;
+      Gap: 10px;
+      Flex-wrap:wrap;
+      Align-items:baseline;
+      Justify-content:space-between;
+    }
+    .job-title{
+      Color: var(--navy);
+      Font-weight: 800;
+    }
+    .job-meta{
+      Color: var(--muted);
+      Font-weight: 650;
+      Font-size: 13.5px;
+    }
+    .job p{
+      Margin: 8px 0 0;
+      Color: var(--text);
+      Font-size: 14.5px;
+    }
+
+    /* Contact */
+    .contact{
+      Display:grid;
+      Grid-template-columns: 1fr 1fr;
+      Gap: 12px;
+    }
+    .contact-item{
+      Border: 1px solid var(--border);
+      Border-radius: 14px;
+      Padding: 14px;
+      Background: #fff;
+    }
+    .label{
+      Display:block;
+      Font-size: 12.5px;
+      Color: var(--muted);
+      Font-weight: 700;
+      Letter-spacing: .02em;
+      Text-transform: uppercase;
+      Margin-bottom: 6px;
+    }
+    .value{
+      Font-weight: 750;
+      Color: var(--navy);
+      Word-break: break-word;
+    }
+    .value a{color: var(--navy); text-decoration: none}
+    .value a:hover{text-decoration: underline}
+
+    Footer{
+      Padding: 18px 0 26px;
+      Color: var(--muted);
+      Font-size: 13.5px;
+      Text-align:center;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero{grid-template-columns: 1fr; padding: 44px 0;}
+      .two-col{grid-template-columns: 1fr}
+      .portfolio-grid{grid-template-columns: repeat(2, minmax(0,1fr))}
+      .contact{grid-template-columns: 1fr}
+    }
+    @media (max-width: 560px){
+      .grid{grid-template-columns: 1fr}
+      .portfolio-grid{grid-template-columns: 1fr}
+      .section-inner{padding: 20px}
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 🟦 HEADER / HERO SECTION (TOP AREA) 
+  <header>
+    <div class=”container”>
+      <div class=”hero”>
+        <div>
+          <span class=”badge”>Freelance Writing Portfolio</span>
+
+          <h1>Raymond Ekpeziza TamaraUkeDimine</h1>
+
+          <p class=”role”>Freelance Writer | Technical Content Creator | Customer Communication Specialist</p>
+
+          <p class=”subtitle”>Clear, structured writing that helps businesses communicate better.</p>
+
+          <p class=”meta”>Patani Town, Delta State, Nigeria</p>
+
+          <div class=”actions”>
+            <a class=”btn btn-primary” href=”#portfolio”>View Portfolio</a>
+            <a class=”btn btn-secondary” href=mailto:kingremzzy@gmail.com>Email Me</a>
+          </div>
+        </div>
+
+        <div class=”hero-card” aria-label=”Hero image”>
+          <!—Image type requested: freelancer working on laptop / clean workspace / writer working online 
+          <img
+            Class=”hero-image”
+            Src=https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80
+            Alt=”Clean, modern desk setup with a laptop”
+            Loading=”lazy”
+          />
+          <div class=”hero-card-footer”>
+            Professional, readable writing for product, support, and marketing teams.
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class=”container”>
+
+    <!-- 🟨 SECTION 2 — ABOUT ME 
+    <section id=”about”>
+      <div class=”section-inner”>
+        <h2>About Me</h2>
+
+        <div class=”two-col”>
+          <div class=”about-text”>
+            <p>
+              I’m a freelance writer and communication specialist with a strong background in customer support, virtual assistance, and remote communication roles.
+              I write clear, structured content that’s easy to understand and easy to use.
+            </p>
+            <p>
+              My work focuses on practical communication across technical, marketing, and customer-facing content—so businesses can explain things simply, reduce confusion, and keep customers informed.
+            </p>
+            <p>
+              I’m currently building my freelance writing career through independent writing projects across technical writing, SEO content, website copywriting, and marketing communication.
+            </p>
+          </div>
+
+          <!—Optional about image (abstract communication / typing concept / remote work lifestyle) 
+          <div class=”about-visual”>
+            <img
+              Src=https://images.unsplash.com/photo-1454165205744-3b78555e5572?auto=format&fit=crop&w=1400&q=80
+              Alt=”Minimal workspace and writing concept”
+              Loading=”lazy”
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🟩 SECTION 3 — SERVICES 
+    <section id=”services”>
+      <div class=”section-inner”>
+        <h2>Services</h2>
+
+        <div class=”grid”>
+          <div class=”service”>
+            <div class=”icon” aria-hidden=”true”>📝</div>
+            <div>
+              <strong>Blog Writing</strong>
+              <span>Readable, structured articles built for clarity and search visibility.</span>
+            </div>
+          </div>
+
+          <div class=”service”>
+            <div class=”icon” aria-hidden=”true”>📄</div>
+            <div>
+              <strong>Technical Writing</strong>
+              <span>User guides, help articles, and documentation that reduces confusion.</span>
+            </div>
+          </div>
+
+          <div class=”service”>
+            <div class=”icon” aria-hidden=”true”>💻</div>
+            <div>
+              <strong>Website Copywriting</strong>
+              <span>Clear homepage and service copy that sounds professional and human.</span>
+            </div>
+          </div>
+
+          <div class=”service”>
+            <div class=”icon” aria-hidden=”true”>✅</div>
+            <div>
+              <strong>SOP Documentation</strong>
+              <span>Step-by-step workflows teams can follow without extra explanations.</span>
+            </div>
+          </div>
+
+          <div class=”service”>
+            <div class=”icon” aria-hidden=”true”>🏷️</div>
+            <div>
+              <strong>Product Descriptions</strong>
+              <span>Feature-to-benefit writing that stays honest and easy to scan.</span>
+            </div>
+          </div>
+
+          <div class=”service”>
+            <div class=”icon” aria-hidden=”true”>✉️</div>
+            <div>
+              <strong>Email Marketing Copy</strong>
+              <span>Simple messaging with strong structure and clear CTAs.</span>
+            </div>
+          </div>
+
+          <div class=”service”>
+            <div class=”icon” aria-hidden=”true”>📣</div>
+            <div>
+              <strong>Social Media Copywriting</strong>
+              <span>Short-form copy designed for clarity, engagement, and consistency.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🟧 SECTION 4 — PORTFOLIO (MOST IMPORTANT SECTION) 
+    <section id=”portfolio”>
+      <div class=”section-inner”>
+        <h2>Portfolio</h2>
+
+        <div class=”portfolio-grid”>
+
+          <div class=”card”>
+            <span class=”pill”>Independent Project</span>
+            <h3>SEO Blog Writing Sample</h3>
+            <p>SEO-focused article with practical strategies for improving small business visibility.</p>
+            <div class=”card-actions”>
+              <a class=”btn btn-primary btn-small” href=https://medium.com/@kingremzzy/5-ways-small-businesses-can-improve-their-online-presence-ffad04546183 target=”_blank” rel=”noopener”>View Project</a>
+            </div>
+          </div>
+
+          <div class=”card”>
+            <span class=”pill”>Independent Project</span>
+            <h3>Technical User Guide — Google Drive</h3>
+            <p>Beginner-friendly guide covering setup, file management, and sharing steps.</p>
+            <div class=”card-actions”>
+              <a class=”btn btn-primary btn-small” href=https://docs.google.com/document/d/12SaOAAFsDr1Ir-ZOMii4apN-EHamzgoA68B1abBcMF4/edit?usp=drivesdk target=”_blank” rel=”noopener”>View Project</a>
+            </div>
+          </div>
+
+          <div class=”card”>
+            <span class=”pill”>Independent Project</span>
+            <h3>SOP Documentation — Package Processing</h3>
+            <p>Structured SOP for receiving, inspecting, sorting, and dispatching packages.</p>
+            <div class=”card-actions”>
+              <a class=”btn btn-primary btn-small” href=https://docs.google.com/document/d/1FgqcgVv11DPoj4xBDPljKZMhRa6ZTsjdO0JCdmlq6bM/edit?usp=drivesdk target=”_blank” rel=”noopener”>View Project</a>
+            </div>
+          </div>
+
+          <div class=”card”>
+            <span class=”pill”>Independent Project</span>
+            <h3>Help Center Article — Password Reset Guide</h3>
+            <p>Clear, user-friendly steps for secure password recovery and troubleshooting.</p>
+            <div class=”card-actions”>
+              <a class=”btn btn-primary btn-small” href=https://docs.google.com/document/d/1kQJRpHQ_iI9zEKixRlFBrEqyivXBALJeFiVTCYZVyhk/edit?usp=drivesdk target=”_blank” rel=”noopener”>View Project</a>
+            </div>
+          </div>
+
+          <div class=”card”>
+            <span class=”pill”>Independent Project</span>
+            <h3>Product Description Writing Sample</h3>
+            <p>Marketing copy for wireless earbuds highlighting comfort, audio quality, and battery life.</p>
+            <div class=”card-actions”>
+              <a class=”btn btn-primary btn-small” href=https://docs.google.com/document/d/1lO_lfwXAaPm08TVZ72BJhQ1PQei4Ke6VBY63fa9FU_o/edit?usp=drivesdk target=”_blank” rel=”noopener”>View Project</a>
+            </div>
+          </div>
+
+          <div class=”card”>
+            <span class=”pill”>Independent Project</span>
+            <h3>Website Copywriting Sample</h3>
+            <p>Homepage copy for a digital marketing agency with structured service messaging.</p>
+            <div class=”card-actions”>
+              <a class=”btn btn-primary btn-small” href=https://docs.google.com/document/d/1J1NQyo-nKrJRcp4DA2gX_KtzsbuttCfEKIxn1xr_d8M/edit?usp=drivesdk target=”_blank” rel=”noopener”>View Project</a>
+            </div>
+          </div>
+
+          <div class=”card”>
+            <span class=”pill”>Independent Project</span>
+            <h3>Email Marketing Copy Sample</h3>
+            <p>Promotional email with a structured subject line, body copy, and clear CTA.</p>
+            <div class=”card-actions”>
+              <a class=”btn btn-primary btn-small” href=https://docs.google.com/document/d/1joTHDQeFNp-RDdbyWcLWnkCO5W7Z9BSLuKtu0DCCIsw/edit?usp=drivesdk target=”_blank” rel=”noopener”>View Project</a>
+            </div>
+          </div>
+
+          <div class=”card”>
+            <span class=”pill”>Independent Project</span>
+            <h3>Social Media Ad Copy Sample</h3>
+            <p>Short-form ad copy for a skincare product designed for engagement and clarity.</p>
+            <div class=”card-actions”>
+              <a class=”btn btn-primary btn-small” href=https://docs.google.com/document/d/1B2HJmaBL3WS8Su9oDQWjhgFyavYbQIe4lEhadfxCMq8/edit?usp=drivesdk target=”_blank” rel=”noopener”>View Project</a>
+            </div>
+          </div>
+
+          <div class=”card”>
+            <span class=”pill”>Independent Project</span>
+            <h3>SaaS Landing Page Copy</h3>
+            <p>Landing page copy for a productivity app with features, benefits, and CTA structure.</p>
+            <div class=”card-actions”>
+              <a class=”btn btn-primary btn-small” href=https://docs.google.com/document/d/1f9bKeTjvvSsGQtSoC1BhXUvQdGKEppiTe-A3eVmrwVk/edit?usp=drivesdk target=”_blank” rel=”noopener”>View Project</a>
+            </div>
+          </div>
+
+          <div class=”card”>
+            <span class=”pill”>Independent Project</span>
+            <h3>Software Feature Documentation</h3>
+            <p>Technical explanation of a task automation feature with setup and use cases.</p>
+            <div class=”card-actions”>
+              <a class=”btn btn-primary btn-small” href=https://docs.google.com/document/d/1kTUdrD7LNP8OUwfOHMHQ3G_ks7eczM01N7j7ujbw-IM/edit?usp=drivesdk target=”_blank” rel=”noopener”>View Project</a>
+            </div>
+          </div>
+
+          <div class=”card”>
+            <span class=”pill”>Independent Project</span>
+            <h3>Customer Communication & Response Handling Sample</h3>
+            <p>Structured, solution-focused support writing designed to improve customer experience.</p>
+            <div class=”card-actions”>
+              <a class=”btn btn-primary btn-small” href=https://medium.com/@kingremzzy/why-clear-communication-matters-in-customer-support-9c66b5025b23 target=”_blank” rel=”noopener”>View Project</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 🟥 SECTION 5 — PROFESSIONAL BACKGROUND 
+    <section id=”background”>
+      <div class=”section-inner”>
+        <h2>Professional Background</h2>
+
+        <div class=”timeline”>
+
+          <div class=”job”>
+            <div class=”job-head”>
+           
+
