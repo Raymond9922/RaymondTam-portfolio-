@@ -1,114 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Portfolio | Raymond Ekpeziza</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Projects | Raymond</title>
 
 <style>
-body{font-family:system-ui;background:#f7f9fc;margin:0}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#F8FAFC;
+color:#1E293B;
+line-height:1.7;
+}
+
+header{
+background:#1F2A44;
+padding:20px 8%;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
 nav{
-  background:white;
-  padding:15px;
-  display:flex;
-  justify-content:space-between;
-  box-shadow:0 10px 20px rgba(0,0,0,0.08);
-}
-nav a{text-decoration:none;margin:0 10px;color:#1F2A44;font-weight:600}
-
-.container{max-width:1100px;margin:auto;padding:20px}
-
-h2{color:#1F2A44}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-.card{
-  background:white;
-  padding:15px;
-  border-radius:15px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.08);
+.logo{
+color:white;
+font-size:24px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:600;
+}
+
+section{
+padding:80px 8%;
+}
+
+.title{
+font-size:45px;
+margin-bottom:20px;
+color:#1F2A44;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.project-card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-6px);
+}
+
+.project-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+margin-bottom:20px;
+}
+
+.project-card h3{
+margin-bottom:15px;
+color:#1F2A44;
 }
 
 .btn{
-  display:inline-block;
-  padding:10px;
-  background:#4DA3FF;
-  color:white;
-  border-radius:10px;
-  text-decoration:none;
-  margin-top:10px;
+display:inline-block;
+margin-top:20px;
+padding:12px 24px;
+background:#2563EB;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+transition:0.3s;
 }
+
+.btn:hover{
+background:#1d4ed8;
+}
+
+.contact{
+margin-top:80px;
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+footer{
+background:#1F2A44;
+color:white;
+padding:40px;
+text-align:center;
+margin-top:70px;
+}
+
 </style>
 </head>
 
 <body>
 
+<header>
+
 <nav>
-<strong>Portfolio</strong>
+
+<div class="logo">Raymond Portfolio</div>
+
 <div>
 <a href="index.html">Home</a>
-<a href="portfolio.html">Portfolio</a>
+<a href="#contact">Contact</a>
 </div>
+
 </nav>
 
-<div class="container">
+</header>
 
-<h2>Portfolio Projects (13)</h2>
+<section>
 
-<div class="grid">
+<h1 class="title">Portfolio Projects</h1>
 
-<!-- 11 EXISTING PROJECTS (UNCHANGED STYLE PRESERVED) -->
-<div class="card">SEO Blog Writing <a class="btn" href="https://medium.com/@kingremzzy/5-ways-small-businesses-can-improve-their-online-presence-ffad04546183" target="_blank">View</a></div>
+<p>
+Below are independent freelance writing, technical documentation, customer communication, and AI-assisted website projects created to demonstrate my writing, communication, and digital presentation skills.
+</p>
 
-<div class="card">Google Drive Guide <a class="btn" href="https://docs.google.com/document/d/12SaOAAFsDr1Ir-ZOMii4apN-EHamzgoA68B1abBcMF4/edit" target="_blank">View</a></div>
+<div class="projects">
 
-<div class="card">SOP Documentation <a class="btn" href="https://docs.google.com/document/d/1FgqcgVv11DPoj4xBDPljKZMhRa6ZTsjdO0JCdmlq6bM/edit" target="_blank">View</a></div>
-
-<div class="card">Password Reset Guide <a class="btn" href="https://docs.google.com/document/d/1kQJRpHQ_iI9zEKixRlFBrEqyivXBALJeFiVTCYZVyhk/edit" target="_blank">View</a></div>
-
-<div class="card">Product Description <a class="btn" href="https://docs.google.com/document/d/1lO_lfwXAaPm08TVZ72BJhQ1PQei4Ke6VBY63fa9FU_o/edit" target="_blank">View</a></div>
-
-<div class="card">Website Copywriting <a class="btn" href="https://docs.google.com/document/d/1J1NQyo-nKrJRcp4DA2gX_KtzsbuttCfEKIxn1xr_d8M/edit" target="_blank">View</a></div>
-
-<div class="card">Email Marketing <a class="btn" href="https://docs.google.com/document/d/1joTHDQeFNp-RDdbyWcLWnkCO5W7Z9BSLuKtu0DCCIsw/edit" target="_blank">View</a></div>
-
-<div class="card">Social Media Ad Copy <a class="btn" href="https://docs.google.com/document/d/1B2HJmaBL3WS8Su9oDQWjhgFyavYbQIe4lEhadfxCMq8/edit" target="_blank">View</a></div>
-
-<div class="card">SaaS Landing Page <a class="btn" href="https://docs.google.com/document/d/1f9bKeTjvvSsGQtSoC1BhXUvQdGKEppiTe-A3eVmrwVk/edit" target="_blank">View</a></div>
-
-<div class="card">Software Documentation <a class="btn" href="https://docs.google.com/document/d/1kTUdrD7LNP8OUwfOHMHQ3G_ks7eczM01N7j7ujbw-IM/edit" target="_blank">View</a></div>
-
-<div class="card">Customer Support Writing <a class="btn" href="https://medium.com/@kingremzzy/why-clear-communication-matters-in-customer-support-9c66b5025b23" target="_blank">View</a></div>
-
-<!-- ➕ NEW PROJECT 12 -->
-<div class="card">
-ClearDesk Support Website
-<a class="btn" href="https://raymond9922.github.io/CUSTOMER-SUPPORT-AGENCY-WEBSITE/" target="_blank">View</a>
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643">
+<h3>SEO Blog Writing Sample</h3>
+<p>SEO-focused blog article designed to help small businesses improve online visibility through practical digital marketing strategies.</p>
+<a href="https://medium.com/@kingremzzy/5-ways-small-businesses-can-improve-their-online-presence-ffad04546183" target="_blank" class="btn">View Project</a>
 </div>
 
-<!-- ➕ NEW PROJECT 13 -->
-<div class="card">
-Abbey’s Restaurant Website
-<a class="btn" href="https://raymond9922.github.io/Abbey-Restaurant-/" target="_blank">View</a>
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
+<h3>Technical User Guide — Google Drive</h3>
+<p>Beginner-friendly technical guide explaining how to organize, upload, share, and manage files using Google Drive.</p>
+<a href="https://docs.google.com/document/d/12SaOAAFsDr1Ir-ZOMii4apN-EHamzgoA68B1abBcMF4/edit?usp=drivesdk" target="_blank" class="btn">View Project</a>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1454165205744-3b78555e5572">
+<h3>SOP Documentation — Package Processing Workflow</h3>
+<p>Structured operational documentation explaining package inspection and dispatch procedures.</p>
+<a href="https://docs.google.com/document/d/1FgqcgVv11DPoj4xBDPljKZMhRa6ZTsjdO0JCdmlq6bM/edit?usp=drivesdk" target="_blank" class="btn">View Project</a>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
+<h3>Help Center Article — Password Reset Guide</h3>
+<p>Customer support documentation explaining secure password reset procedures clearly.</p>
+<a href="https://docs.google.com/document/d/1kQJRpHQ_iI9zEKixRlFBrEqyivXBALJeFiVTCYZVyhk/edit?usp=drivesdk" target="_blank" class="btn">View Project</a>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796">
+<h3>Product Description Writing Sample</h3>
+<p>Marketing-focused product description highlighting comfort, sound quality, and user experience.</p>
+<a href="https://docs.google.com/document/d/1lO_lfwXAaPm08TVZ72BJhQ1PQei4Ke6VBY63fa9FU_o/edit?usp=drivesdk" target="_blank" class="btn">View Project</a>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
+<h3>Website Copywriting Sample</h3>
+<p>Homepage copywriting focused on business messaging and service presentation.</p>
+<a href="https://docs.google.com/document/d/1J1NQyo-nKrJRcp4DA2gX_KtzsbuttCfEKIxn1xr_d8M/edit?usp=drivesdk" target="_blank" class="btn">View Project</a>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a">
+<h3>Email Marketing Copy Sample</h3>
+<p>Professional promotional email copy encouraging engagement and conversion.</p>
+<a href="https://docs.google.com/document/d/1joTHDQeFNp-RDdbyWcLWnkCO5W7Z9BSLuKtu0DCCIsw/edit?usp=drivesdk" target="_blank" class="btn">View Project</a>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28">
+<h3>Social Media Ad Copy Sample</h3>
+<p>Persuasive short-form promotional copy created for skincare marketing campaigns.</p>
+<a href="https://docs.google.com/document/d/1B2HJmaBL3WS8Su9oDQWjhgFyavYbQIe4lEhadfxCMq8/edit?usp=drivesdk" target="_blank" class="btn">View Project</a>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4">
+<h3>SaaS Landing Page Copy</h3>
+<p>Landing page copywriting project demonstrating software product presentation.</p>
+<a href="https://docs.google.com/document/d/1f9bKeTjvvSsGQtSoC1BhXUvQdGKEppiTe-A3eVmrwVk/edit?usp=drivesdk" target="_blank" class="btn">View Project</a>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f">
+<h3>Software Feature Documentation</h3>
+<p>Technical documentation explaining task automation setup and workflow functionality.</p>
+<a href="https://docs.google.com/document/d/1kTUdrD7LNP8OUwfOHMHQ3G_ks7eczM01N7j7ujbw-IM/edit?usp=drivesdk" target="_blank" class="btn">View Project</a>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
+<h3>Customer Communication & Response Handling</h3>
+<p>Professional communication writing sample demonstrating customer support response structure.</p>
+<a href="https://medium.com/@kingremzzy/why-clear-communication-matters-in-customer-support-9c66b5025b23" target="_blank" class="btn">View Project</a>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
+<h3>Customer Support Agency Website — ClearDesk Support</h3>
+<p>AI-assisted business website project showcasing modern communication-focused branding.</p>
+<a href="https://raymond9922.github.io/CUSTOMER-SUPPORT-AGENCY-WEBSITE/" target="_blank" class="btn">View Live Website</a>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0">
+<h3>Restaurant Business Website — Abbey’s Ijaw Flame Kitchen</h3>
+<p>AI-assisted restaurant website demonstrating premium food branding and customer engagement.</p>
+<a href="https://raymond9922.github.io/Abbey-Restaurant-/" target="_blank" class="btn">View Live Website</a>
 </div>
 
 </div>
 
-<h2 style="margin-top:40px;">Contact</h2>
+<div class="contact" id="contact">
 
-<p>Email: kingremzzy@gmail.com</p>
+<h2>Contact Me</h2>
 
-<a class="btn" href="https://www.linkedin.com/in/raymond-ekpeziba-0737751aa" target="_blank">LinkedIn</a>
-<a class="btn" href="https://wa.me/2347015598205?text=Hello%20Raymond" target="_blank">WhatsApp</a>
+<p>
+I’m available for freelance writing, technical documentation, customer communication projects, and AI-assisted website creation services.
+</p>
+
+<br>
+
+<a href="mailto:kingremzzy@gmail.com" class="btn">Email Me</a>
+
+<a href="https://www.linkedin.com/in/raymond-ekpeziba-0737751aa?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="btn">LinkedIn</a>
+
+<a href="https://wa.me/2347015598205?text=Hello%20Raymond,%20I%20want%20to%20hire%20you%20for%20a%20project" target="_blank" class="btn">WhatsApp</a>
 
 </div>
 
-<footer style="text-align:center;padding:20px">
-© 2026 Raymond Ekpeziza
+</section>
+
+<footer>
+
+<p>© 2026 Raymond Ekpeziza TamaraUkeDimine</p>
+
 </footer>
 
 </body>
